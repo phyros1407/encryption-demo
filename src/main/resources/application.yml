@@ -1,0 +1,31 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "info, health, beans, mappings, shutdown"
+  endpoint:
+    shutdown:
+      enabled: "true"
+
+info:
+  app:
+    name: "encryption-demo"
+    encoding: "UTF-8"
+    java:
+      version: "1.8"
+      
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: "jdbc:sqlserver://beta-testers-server.database.windows.net:1433;database=beta_testers_bd;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"
+    username: beta_testers
+    password: Pier1996
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: "org.hibernate.dialect.SQLServer2012Dialect"
+      ddl-auto: none
+azure:
+  keyvault:
+    client-id: 9f3xxf7-1658-400e-909e-abc68xxx8d54
+    client-secret: ?cixxxxLpgUJtzIfQfLh:[xxxT-qP6m0

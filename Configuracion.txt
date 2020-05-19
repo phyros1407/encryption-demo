@@ -1,0 +1,21 @@
+lab-encryption-sqldb
+lab-encryption-sqlsrv
+lab-encryption-rg
+lab-encryption-kv
+lab-encryption-sp
+
+Client ID / Application Id:
+9f3bbbf7-1658-400e-909e-abc681308d54
+
+Client Secret:
+?cigxKY4LpgUJtzIfQfLh:[3oT-qP6m0
+
+
+CREATE TABLE [dbo].[Customer](
+  [id] [int] IDENTITY(1,1),
+  [first_name] [varchar](50) NULL,
+  [last_name] [varchar](50) NULL,
+  [address] [varchar](50) NULL,
+  [email] [varchar](50) NULL,
+  PRIMARY KEY CLUSTERED ([id] ASC) ON [PRIMARY] );
+  GO
