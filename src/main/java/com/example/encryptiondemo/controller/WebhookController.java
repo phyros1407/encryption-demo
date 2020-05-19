@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebhookController {
 
     @PostMapping(path = "")
-    public void saveTester(@RequestBody WeebHook weebHook)
+    public WeebHook saveTester(@RequestBody WeebHook weebHook)
     {
         System.out.println("request de json : " + weebHook);
+        return weebHook;
     }
 
 
